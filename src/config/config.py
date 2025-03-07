@@ -26,12 +26,12 @@ def get_env(name: str, default=None):
 
 # general settings
 WORKERS: int = get_env("WORKERS", 100)
-APP_ID: int = get_env("APP_ID")
-APP_HASH = get_env("APP_HASH")
-BOT_TOKEN = get_env("BOT_TOKEN")
+APP_ID: int = get_env("APP_ID","9301087")
+APP_HASH = get_env("APP_HASH", "cbabdb3f23de6326352ef3ac26338d9c")
+BOT_TOKEN = get_env("BOT_TOKEN", "6473122623:AAFF5upYe3g2z2XTlRnNnIQuG3yDqfcWKTA")
 OWNER = [int(i) for i in str(get_env("OWNER")).split(",")]
 # db settings
-AUTHORIZED_USER: str = get_env("AUTHORIZED_USER", "")
+AUTHORIZED_USER: str = get_env("AUTHORIZED_USER", "1525203313")
 DB_DSN = get_env("DB_DSN")
 REDIS_HOST = get_env("REDIS_HOST")
 
@@ -43,7 +43,7 @@ ENABLE_ARIA2 = get_env("ENABLE_ARIA2")
 RCLONE_PATH = get_env("RCLONE")
 
 # payment settings
-ENABLE_VIP = get_env("ENABLE_VIP")
+ENABLE_VIP = get_env("ENABLE_VIP", "False")
 PROVIDER_TOKEN = get_env("PROVIDER_TOKEN")
 FREE_DOWNLOAD = get_env("FREE_DOWNLOAD", 3)
 TOKEN_PRICE = get_env("TOKEN_PRICE", 10)  # 1 USD=10 downloads
