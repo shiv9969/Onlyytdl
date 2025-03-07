@@ -29,9 +29,9 @@ WORKERS: int = get_env("WORKERS", 100)
 APP_ID: int = get_env("APP_ID","9301087")
 APP_HASH = get_env("APP_HASH", "cbabdb3f23de6326352ef3ac26338d9c")
 BOT_TOKEN = get_env("BOT_TOKEN", "6473122623:AAFF5upYe3g2z2XTlRnNnIQuG3yDqfcWKTA")
-OWNER = [int(i) for i in str(get_env("OWNER")).split(",")]
+OWNER = [int(i) for i in str(get_env("OWNER", "1525203313")).split(",")]
 # db settings
-AUTHORIZED_USER: str = get_env("AUTHORIZED_USER", "1525203313")
+AUTHORIZED_USER: str = get_env("AUTHORIZED_USER", "")
 DB_DSN = get_env("DB_DSN")
 REDIS_HOST = get_env("REDIS_HOST")
 
